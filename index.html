@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from drank.cc/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Dec 2024 01:39:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Illusions.xyz | Get good. Get Illusions.">
+    <meta content="#cd28ff" data-react-helmet="true" name="theme-color" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type = "image" href="pic.png">
+    <title></title>
+</head>
+
+<body>
+    <audio loop preload="auto" id="audio" src="audio.mp3" type="audio/mp3"></audio>
+    <video autoplay muted loop id="myVideo"> <!-- Video background -->
+        <source src="assets/main/default.html" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div id="clickoverlay">
+        <div id="overlay-content">
+            <span>click to enter.</span>
+        </div>
+    </div>
+
+    <div id="particles-js"></div>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/dev.js"></script>
+    <script src="assets/js/title.js"></script>
+    <div id="panel">
+        <div id="content">
+            <img src="assets/main/pic.png" alt="image">
+            <span>
+                <gradient>Illusions.xyz</gradient>
+            </span>
+
+            <span class="infotext">
+                Get Good. <div style="display: inline; font-weight: 800;">Get Illusions.</div>
+            </span>
+            
+            <span>
+                <a href="https://discord.gg/xc9rgwqG">Discord</a>
+                 / 
+                <a href="https://www.youtube.com/watch?v=Nga3ka1J2Rk">Youtube</a>
+                 / 
+                <a href="devlog.html">Devlog</a>
+                / 
+                <a href="status.html">Status</a>
+            </span>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("clickoverlay").addEventListener("click", function () {
+            this.classList.add("hide");
+            document.getElementById("audio").play();
+        });
+    </script>
+</body>
+
+
+</html>
