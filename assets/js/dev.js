@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = `https://raw.githubusercontent.com/IllusionsCC/devlog/refs/heads/main/devlog.json`;
+    const apiUrl = `https://raw.githubusercontent.com/skibidicc/devlog.json/refs/heads/main/devlog.json`;
 
     fetch(apiUrl)
         .then(response => response.json()) 
@@ -16,6 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 .join('<br>');
             document.getElementById('removed-info').innerHTML = removedItems;
 
+            const removed = (data.removed || [])
+                .filter(item => item.trim() !== '')
+                .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
+                .join('<br>');
+            document.getElementById('removed').innerHTML = removedItems;
+
+            const added = (data.removed || [])
+                .filter(item => item.trim() !== '')
+                .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
+                .join('<br>');
+            document.getElementById('added').innerHTML = removedItems;
           
         })
         .catch(error => console.error('Error fetching data:', error));

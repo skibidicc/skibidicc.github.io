@@ -46,8 +46,8 @@ body {
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     display: flex;
-    width: 300px;
-    height: 260px;
+    width: 400px;
+    height: 500px;
 }
 
 #panel #content {
@@ -86,13 +86,14 @@ body {
 #added-info, #removed-info {
     text-align: center; /* Centers text horizontally */
     margin: 0 auto; /* Centers the element itself if it's a block-level element */
+    
 }
 
   
 
 #panel img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     display: block;
     margin-right: auto;
     margin-left: auto;
