@@ -27,6 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
                 .join('<br>');
             document.getElementById('added').innerHTML = removedItems;
+
+
+            const added = (data.removed || [])
+                .filter(item => item.trim() !== '')
+                .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
+                .join('<br>');
+            document.getElementById('reaction').innerHTML = removedItems;
+
+            const added = (data.removed || [])
+                .filter(item => item.trim() !== '')
+                .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
+                .join('<br>');
+            document.getElementById('citations').innerHTML = removedItems;
           
         })
         .catch(error => console.error('Error fetching data:', error));
