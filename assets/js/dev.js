@@ -29,13 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('added').innerHTML = removedItems;
 
 
-            const added = (data.removed || [])
+            const reaction = (data.removed || [])
                 .filter(item => item.trim() !== '')
                 .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
                 .join('<br>');
             document.getElementById('reaction').innerHTML = removedItems;
 
-            const added = (data.removed || [])
+            const citations = (data.removed || [])
                 .filter(item => item.trim() !== '')
                 .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
                 .join('<br>');
