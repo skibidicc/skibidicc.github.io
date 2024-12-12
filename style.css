@@ -142,6 +142,38 @@ body {
     outline: none;
 }
 
+#generate-invite-code {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #cd28ff;
+    outline: none;
+    background: linear-gradient(90deg, #C50753, #ff69f3, #C50753, #e270ff, #C50753);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    animation-fill-mode: forwards;
+    background-size: 400% 100%;
+    text-shadow: 1px 1px 8px #cd28ff;
+}
+
+#generate-invite-code:focus {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #cd28ff;
+    outline: none;
+    background: linear-gradient(90deg, #C50753, #ff69f3, #C50753, #e270ff, #C50753);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    animation-fill-mode: forwards;
+    background-size: 400% 100%;
+    text-shadow: 1px 1px 8px #cd28ff;
+}
+
 #textbox-container {
     display: flex;
     flex-direction: column;
