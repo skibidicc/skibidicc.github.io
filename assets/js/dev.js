@@ -16,19 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 .join('<br>');
             document.getElementById('removed-info').innerHTML = removedItems;
 
-            const removed = (data.removed || [])
-                .filter(item => item.trim() !== '')
-                .map(item => `<span class="added devlogtext">${item.trim()}</span>`)
-                .join('<br>');
-            document.getElementById('removed').innerHTML = removed;
-
-            const added = (data.removed || [])
-                .filter(item => item.trim() !== '')
-                .map(item => `<span class="added devlogtext">${item.trim()}</span>`)
-                .join('<br>');
-            document.getElementById('added').innerHTML = added;
-
-
             const reaction = (data.removed || [])
                 .filter(item => item.trim() !== '')
                 .map(item => `<span class="added devlogtext">${item.trim()}</span>`)
