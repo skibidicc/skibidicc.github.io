@@ -33,13 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 .filter(item => item.trim() !== '')
                 .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
                 .join('<br>');
-            document.getElementById('reaction').innerHTML = removedItems;
+            document.getElementById('reaction').innerHTML = reaction;
 
             const citations = (data.removed || [])
                 .filter(item => item.trim() !== '')
                 .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
                 .join('<br>');
-            document.getElementById('citations').innerHTML = removedItems;
+            document.getElementById('citations').innerHTML = citations;
           
         })
         .catch(error => console.error('Error fetching data:', error));
