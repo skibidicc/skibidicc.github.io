@@ -20,13 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 .filter(item => item.trim() !== '')
                 .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
                 .join('<br>');
-            document.getElementById('removed').innerHTML = removedItems;
+            document.getElementById('removed').innerHTML = removed;
 
             const added = (data.removed || [])
                 .filter(item => item.trim() !== '')
                 .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
                 .join('<br>');
-            document.getElementById('added').innerHTML = removedItems;
+            document.getElementById('added').innerHTML = added;
 
 
             const reaction = (data.removed || [])
