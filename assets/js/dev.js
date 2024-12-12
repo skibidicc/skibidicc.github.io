@@ -12,32 +12,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const removedItems = (data.removed || [])
                 .filter(item => item.trim() !== '')
-                .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
+                .map(item => `<span class="added devlogtext">${item.trim()}</span>`)
                 .join('<br>');
             document.getElementById('removed-info').innerHTML = removedItems;
 
             const removed = (data.removed || [])
                 .filter(item => item.trim() !== '')
-                .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
+                .map(item => `<span class="added devlogtext">${item.trim()}</span>`)
                 .join('<br>');
             document.getElementById('removed').innerHTML = removed;
 
             const added = (data.removed || [])
                 .filter(item => item.trim() !== '')
-                .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
+                .map(item => `<span class="added devlogtext">${item.trim()}</span>`)
                 .join('<br>');
             document.getElementById('added').innerHTML = added;
 
 
             const reaction = (data.removed || [])
                 .filter(item => item.trim() !== '')
-                .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
+                .map(item => `<span class="added devlogtext">${item.trim()}</span>`)
                 .join('<br>');
             document.getElementById('reaction').innerHTML = reaction;
 
             const citations = (data.removed || [])
                 .filter(item => item.trim() !== '')
-                .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
+                .map(item => `<span class="added devlogtext">${item.trim()}</span>`)
                 .join('<br>');
             document.getElementById('citations').innerHTML = citations;
           
