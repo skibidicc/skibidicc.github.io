@@ -12,19 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const removedItems = (data.removed || [])
                 .filter(item => item.trim() !== '')
-                .map(item => `<span class="removed devlogtext">${item.trim()}</span>`)
+                .map(item => `<span class="added devlogtext">${item.trim()}</span>`)
                 .join('<br>');
             document.getElementById('removed-info').innerHTML = removedItems;
 
             const reaction = (data.reaction || [])
                 .filter(item => item.trim() !== '')
-                .map(item => `<span class="reaction devlogtext">${item.trim()}</span>`)
+                .map(item => `<span class="added devlogtext">${item.trim()}</span>`)
                 .join('<br>');
             document.getElementById('reaction').innerHTML = reaction;
 
             const citations = (data.citations || [])
                 .filter(item => item.trim() !== '')
-                .map(item => `<span class="citations devlogtext">${item.trim()}</span>`)
+                .map(item => `<span class="added devlogtext">${item.trim()}</span>`)
                 .join('<br>');
             document.getElementById('citations').innerHTML = citations;
 
