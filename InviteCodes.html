@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Illusions.xyz | Get good. Get Illusions.">
+    <meta content="#cd28ff" data-react-helmet="true" name="theme-color" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type = "image" href="assets/main/pic.png">
+    <title>Illusions.xyz</title>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/dev.js"></script>
+    <script src="assets/js/title.js"></script>
+    <div id="panel">
+
+       <div id="textbox-container">
+    <form id="register-form">
+        <gradientDevlog>Username</gradientDevlog>
+        <input type="text" 
+        id="usernameTextbox1"
+         class="custom-textbox" 
+         placeholder="Username">
+        <br>
+        <gradientDevlog>Password</gradientDevlog>
+        <input type="password" 
+        id="passwordTextbox1" 
+        class="custom-textbox" 
+        placeholder="Password">
+        <br>
+        <gradientDevlog>Invite Code</gradientDevlog>
+        <input type="invcode" 
+        id="passwordTextbox12" 
+        class="custom-textbox" 
+        placeholder="Invite Code">
+    </form>
+</div>
+
+<div id="button-container">
+    <a href="login.html" class="custom-btn">Go to Login</a>
+    <br>
+    <a href="InviteCodes.html" class="custom-btn">inv code test</a>
+</div>
+
+<script>
+    document.getElementById('register-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var username = document.getElementById('usernameTextbox1').value;
+        var password = document.getElementById('passwordTextbox1').value;
+        var inviteCode = document.getElementById('passwordTextbox12').value;
+
+        var storedData = localStorage.getItem('users');
+        if (storedData) {
+            var users = JSON.parse(storedData);
+            for (var i = 0; i < users.length; i++) {
+                if (users[i].username === username) {
+                    alert('Username already exists');
+                    return;
+                }
+            }
+        }
+
+        var storedInviteCodes = localStorage.getItem('inviteCodes');
+        if (storedInviteCodes) {
+            var inviteCodes = JSON.parse(storedInviteCodes);
+            if (!inviteCodes.includes(inviteCode)) {
+                alert('Invalid invite code');
+                return;
+            }
+        } else {
+            alert('No invite codes found');
+            return;
+        }
+
+        var newUser = {
+            username: username,
+            password: password
+        };
+
+        if (storedData) {
+            var users = JSON.parse(storedData);
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+        } else {
+            localStorage.setItem('users', JSON.stringify([newUser    ]));
+        }
+
+        alert('Registration successful!');
+        // Redirect to login page
+        window.location.href = 'login.html';
+    });
+</script>

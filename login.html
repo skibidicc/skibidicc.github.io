@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Illusions.xyz | Get good. Get Illusions.">
+    <meta content="#cd28ff" data-react-helmet="true" name="theme-color" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image" href="assets/main/pic.png">
+    <title>Illusions.xyz Login</title>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/dev.js"></script>
+    <script src="assets/js/title.js"></script>
+
+    <div id="panel">
+        <div id="textbox-container">
+            <gradientDevlog>Username</gradientDevlog>
+            <input type="text" id="usernameTextbox" class="custom-textbox" placeholder="Username">
+
+            <gradientDevlog>Password</gradientDevlog>
+            <input type="password" id="passwordTextbox" class="custom-textbox" placeholder="Password">
+        </div>
+
+        <a href="reg.html">Go to Register</a>
+
+        <script>
+            // Function to handle login
+            function handleLogin() {
+                var username = document.getElementById('usernameTextbox').value;
+                var password = document.getElementById('passwordTextbox').value;
+
+                var storedData = localStorage.getItem('users');
+                if (storedData) {
+                    var users = JSON.parse(storedData);
+                    for (var i = 0; i < users.length; i++) {
+                        if (users[i].username === username && users[i].password === password) {
+                            // Set the loggedIn flag in localStorage
+                            localStorage.setItem('loggedIn', 'true');
+                            alert('Login successful!');
+                            // Redirect to index2.html after successful login
+                            window.location.href = "index2.html"; // Redirect to index2.html
+                            return;
+                        }
+                    }
+                    alert('Invalid username or password');
+                } else {
+                    alert('No users found');
+                }
+            }
+
+            // Event listener for Enter key press
+            document.getElementById('usernameTextbox').addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    handleLogin();
+                }
+            });
+
+            document.getElementById('passwordTextbox').addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    handleLogin();
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>

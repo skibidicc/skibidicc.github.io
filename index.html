@@ -16,6 +16,16 @@
     <title></title>
 </head>
 
+<title>Redirecting...</title>
+    <script>
+        window.location.href = "login.html";  // Redirect to login.html
+    </script>
+</head>
+<body>
+    <!-- Optional: Add a message here for users in case the redirect fails -->
+    <p>Redirecting you to the login page...</p>
+
+
 <body>
     <audio loop preload="auto" id="audio" src="audio.mp3" type="audio/mp3"></audio>
     <video autoplay muted loop id="myVideo"> <!-- Video background -->
@@ -41,6 +51,14 @@
                 <gradient>Illusions.xyz</gradient>
             </span>
 
+            <script>
+                // Check if the user is logged in
+                if (localStorage.getItem('loggedIn') !== 'true') {
+                    // Redirect to login page if not logged in
+                    window.location.href = "login.html"; // Redirect to login page
+                }
+            </script>
+
             <span class="infotext">
                 Get Good. <div style="display: inline; font-weight: 800;">Get Illusions.</div>
             </span>
@@ -48,7 +66,7 @@
             <span>
                 <a href="https://discord.gg/xc9rgwqG">Discord</a>
                  / 
-                 <a href="https://www.youtube.com/watch?v=Nga3ka1J2Rk">Youtube</a>
+                 <a href="https://soundcloud.com/basedmoneysquad/lsd">Soundcloud</a>
                 / 
                 <a href="status.html">Status</a>
                 /

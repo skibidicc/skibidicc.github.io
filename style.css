@@ -129,6 +129,25 @@ body {
     margin-top: 8px;
 }
 
+#usernameTextbox, #passwordTextbox, #usernameTextbox1, #passwordTextbox1, #passwordTextbox12, #inviteCodeTextbox {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #cd28ff;
+}
+
+#usernameTextbox:focus, #passwordTextbox:focus, #usernameTextbox1:focus, #passwordTextbox1:focus, #passwordTextbox12:focus, #inviteCodeTextbox  {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #cd28ff;
+    outline: none;
+}
+
+#textbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .devlogtext {
     margin-bottom: 0px;
     margin-top: 0px;
