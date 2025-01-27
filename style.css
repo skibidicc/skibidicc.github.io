@@ -46,8 +46,8 @@ body {
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     display: flex;
-    width: 400px;
-    height: 500px;
+    width: 300px;
+    height: 260px;
 }
 
 #panel #content {
@@ -86,14 +86,13 @@ body {
 #added-info, #removed-info {
     text-align: center; /* Centers text horizontally */
     margin: 0 auto; /* Centers the element itself if it's a block-level element */
-    
 }
 
   
 
 #panel img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -127,57 +126,6 @@ body {
 .infotext {
     margin-bottom: 8px;
     margin-top: 8px;
-}
-
-#usernameTextbox, #passwordTextbox, #usernameTextbox1, #passwordTextbox1, #passwordTextbox12, #inviteCodeTextbox {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #cd28ff;
-}
-
-#usernameTextbox:focus, #passwordTextbox:focus, #usernameTextbox1:focus, #passwordTextbox1:focus, #passwordTextbox12:focus, #inviteCodeTextbox  {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #cd28ff;
-    outline: none;
-}
-
-#generate-invite-code {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #cd28ff;
-    outline: none;
-    background: linear-gradient(90deg, #C50753, #ff69f3, #C50753, #e270ff, #C50753);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: rainbow_animation 6s ease-in-out infinite;
-    margin-bottom: 0px;
-    margin-top: 10px;
-    animation-fill-mode: forwards;
-    background-size: 400% 100%;
-    text-shadow: 1px 1px 8px #cd28ff;
-}
-
-#generate-invite-code:focus {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #cd28ff;
-    outline: none;
-    background: linear-gradient(90deg, #C50753, #ff69f3, #C50753, #e270ff, #C50753);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: rainbow_animation 6s ease-in-out infinite;
-    margin-bottom: 0px;
-    margin-top: 10px;
-    animation-fill-mode: forwards;
-    background-size: 400% 100%;
-    text-shadow: 1px 1px 8px #cd28ff;
-}
-
-#textbox-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .devlogtext {
