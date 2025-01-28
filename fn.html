@@ -18,7 +18,7 @@ local aimbot = {
     distance = 1000,
     speed = 0.5,
     autoprediction = true,
-    teamcheck = false,
+    teamcheck = true,
     bone = "Head",
     --
     fov_circle = true,
@@ -41,7 +41,6 @@ local Player_Modifications = {
 
 local ESP = {
     Enabled = true,
-    TeamCheck = true,
     MaxDistance = 400,
     FontSize = 11,
     FadeOut = {
@@ -50,7 +49,6 @@ local ESP = {
         OnLeave = false,
     },
     Options = { 
-        Teamcheck = true, TeamcheckRGB = Color3.fromRGB(0, 255, 0),
         Friendcheck = true, FriendcheckRGB = Color3.fromRGB(0, 255, 0),
         Highlight = true, HighlightRGB = Color3.fromRGB(255, 0, 0),
     },
@@ -317,8 +315,7 @@ do -- Initalize
                             Functions:FadeOutOnDist(Flag2, Dist)
                         end
 
-                        -- Teamcheck
-                        if ESP.TeamCheck and plr ~= lplayer and ((lplayer.Team ~= plr.Team and plr.Team) or (not lplayer.Team and not plr.Team)) and plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") and plr.Character:FindFirstChild("Humanoid") then
+                        
 
                             do -- Chams
                                 Chams.Adornee = plr.Character
