@@ -441,7 +441,7 @@ do -- Initalize
 
                             do -- Names
                                 Name.Visible = ESP.Drawing.Names.Enabled
-                                if ESP.Options.Friendcheck and lplayer:IsFriendsWith(plr.UserId) then
+                                if v then
                                     Name.Text = string.format('(<font color="rgb(%d, %d, %d)">F</font>) %s', ESP.Options.FriendcheckRGB.R * 255, ESP.Options.FriendcheckRGB.G * 255, ESP.Options.FriendcheckRGB.B * 255, plr.Name)
                                 else
                                     Name.Text = string.format('(<font color="rgb(%d, %d, %d)">E</font>) %s', 255, 0, 0, plr.Name)
