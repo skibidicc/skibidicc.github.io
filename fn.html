@@ -317,9 +317,7 @@ do -- Initalize
                             Functions:FadeOutOnDist(Flag2, Dist)
                         end
 
-                        -- Teamcheck
-                        if ESP.TeamCheck and plr ~= lplayer and ((lplayer.Team ~= plr.Team and plr.Team) or (not lplayer.Team and not plr.Team)) and plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") and plr.Character:FindFirstChild("Humanoid") then
-
+                       
                             do -- Chams
                                 Chams.Adornee = plr.Character
                                 Chams.Enabled = ESP.Drawing.Chams.Enabled
@@ -543,7 +541,6 @@ end;
 utilities.functions.closest_to_mouse = function(type)
     local target = nil
     local maxDist = math.huge
-    local localPlayerTeam = lplayer.TeamColor
     local fovRadius = aimbot.fov_circle and aimbot.radius or 0
 
     for _, v in ipairs(game:GetService("Players"):GetPlayers()) do
@@ -555,7 +552,6 @@ utilities.functions.closest_to_mouse = function(type)
             if humanoid and humanoid.Health > 0 and humanoidRootPart and head then
                 local pos, onScreen = camera:WorldToViewportPoint(v.Character[aimbot.bone].Position)
                 if onScreen then
-                    local targetPlayerTeam = v.TeamColor
                     local distVector = Vector2.new(pos.X, pos.Y) - game:GetService("UserInputService"):GetMouseLocation()
                     if lplayer.Character:FindFirstChild("HumanoidRootPart") and v.Character:FindFirstChild("HumanoidRootPart") then
                         local dist = distVector.Magnitude
