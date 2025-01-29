@@ -1,8 +1,11 @@
-local Workspace, RunService, Players, CoreGui, Lighting = cloneref(game:GetService("Workspace")), cloneref(game:GetService("RunService")), cloneref(game:GetService("Players")), game:GetService("CoreGui"), cloneref(game:GetService("Lighting"))
-local Skybox = loadstring(game:HttpGet("https://raw.githubusercontent.com/BurnHubz/eclipse/main/Skyboxes.lua", true))();
+local Workspace = cloneref(game:GetService("Workspace"))
+local RunService = cloneref(game:GetService("RunService"))
+local Players = cloneref(game:GetService("Players"))
+local CoreGui = game:GetService("CoreGui")
+local Lighting = cloneref(game:GetService("Lighting"))
 
 
-print("loaded?")
+
 
 
 local utilities = {
@@ -13,20 +16,20 @@ local utilities = {
 };
 
 local aimbot = {
-    enabled = true,
+    enabled = false,
     randomisation = 0,
-    distance = 1000,
+    distance = 200,
     speed = 0.5,
     autoprediction = true,
     teamcheck = false,
     bone = "Head",
     --
-    fov_circle = true,
+    fov_circle = false,
     dynamic = true,
     radius = 120,
     position = "Mouse",
     --
-    snapline = true,
+    snapline = false,
     snapline_color = Color3.fromRGB(255, 255, 255),
     snapline_bone = "HumanoidRootPart",
     snapline_from = "Mouse",
@@ -42,7 +45,7 @@ local Player_Modifications = {
 local ESP = {
     Enabled = true,
     TeamCheck = true,
-    MaxDistance = 400,
+    MaxDistance = 200,
     FontSize = 11,
     FadeOut = {
         OnDistance = true,
@@ -56,7 +59,7 @@ local ESP = {
     },
     Drawing = {
         Chams = {
-            Enabled  = false,
+            Enabled  = true,
             Thermal = false,
             FillRGB = Color3.fromRGB(119, 120, 255),
             Fill_Transparency = 100,
@@ -317,7 +320,10 @@ do -- Initalize
                             Functions:FadeOutOnDist(Flag2, Dist)
                         end
 
-                       
+                        -- Teamcheck
+                        v = true
+                        if v then
+
                             do -- Chams
                                 Chams.Adornee = plr.Character
                                 Chams.Enabled = ESP.Drawing.Chams.Enabled
