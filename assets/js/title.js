@@ -21,9 +21,13 @@ var titles = [
   "$ Niggahac $", 
   "$ Niggahack $", 
   "$ Niggahack. $", 
-  "$ Niggahack.n $", 
-  "$ Niggahack.ne $", 
-  "$ Niggahack.net $", 
+  "$ Niggahack.o $", 
+  "$ Niggahack.on $", 
+  "$ Niggahack.onl $", 
+  "$ Niggahack.onli $", 
+  "$ Niggahack.onlin $", 
+  "$ Niggahack.online $", 
+
 ];
 
 function changeTitle() {
